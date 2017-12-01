@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Muli");
+.title {
+  display: flex;
+  align-content: center;
+  justify-content: center; }
+
+.graph {
+  height: 100%;
+  width: 100%;
+  background-color: lightblue; }
+  .graph svg {
+    height: 100%;
+    width: 100%; }
+
+.node circle {
+  stroke: #fff;
+  stroke-width: 1.5px; }
