@@ -15,7 +15,8 @@
     "nasa",
     "open",
     "data",
-    "d3js"
+    "d3js",
+    "datanauts"
   ],
   "author": "Bea Hernández",
   "license": "MIT",
@@ -25,7 +26,10 @@
   "homepage": "https://github.com/chucheria/DataGraph#readme",
   "dependencies": {
     "browser-sync": "^2.18.13",
+    "express": "^4.16.2",
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sass": "^3.1.0",
+    "neo4j": "^2.0.0-RC2"
   }
 }
