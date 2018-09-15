@@ -1,17 +1,70 @@
-@import url("https://fonts.googleapis.com/css?family=Muli");
+@import url("https://fonts.googleapis.com/css?family=Bungee|Share+Tech+Mono");
+body {
+  background-color: #060e1b; }
+
+canvas {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh; }
+
+.content {
+  position: relative;
+  z-index: 2; }
+
 .title {
   display: flex;
   align-content: center;
-  justify-content: center; }
+  justify-content: center;
+  font-family: "Bungee", cursive;
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: #fff7b9; }
 
 .graph {
   height: 100%;
   width: 100%;
-  background-color: lightblue; }
+  position: relative;
+  margin-top: 1em; }
   .graph svg {
     height: 100%;
     width: 100%; }
 
-.node circle {
+.link line {
+  transition: opacity 0.5s ease-in-out;
+  stroke: #b3e1f1;
+  stroke-width: 2px;
+  stroke-opacity: 0.1; }
+
+.secondary-link {
+  opacity: 0.07; }
+
+.nodes circle {
   stroke: #fff;
-  stroke-width: 1.5px; }
+  stroke-width: 1.5px;
+  fill: #fff; }
+
+circle {
+  transition: opacity 0.5s ease-in-out; }
+
+.dataset {
+  fill: #ffea72; }
+
+.keyword {
+  fill: #6fb7d0; }
+
+.theme {
+  fill: #ff8314; }
+
+.secondary-node {
+  opacity: 0.2; }
+
+.node-text {
+  pointer-events: none;
+  font-size: 1rem;
+  font-family: "Share Tech Mono", monospace;
+  fill: #fff;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; }

@@ -1,34 +1,123 @@
-// Typography
 
-@import url( 'https://fonts.googleapis.com/css?family=Muli');
-$font-family: 'Muli', sans-serif;
+////////////////////////////////////////////////////////////////////////////////
+///////////////// 1. Typography
+///////////////// 2. Colors
+/////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////// 1.Typography
+@import url('https://fonts.googleapis.com/css?family=Bungee|Share+Tech+Mono');
+$font-family: 'Share Tech Mono', monospace;
+$font-family-title: 'Bungee', cursive;
 $font-weight: 300;
 $font-title: 900;
 $font-size: 1rem;
+$font-size-title: 1.6rem;
 $line-height: 1.6rem;
 
-// Title
 
+///////////////// 2.Colors
+$line: #b3e1f1;
+$text: #fff;
+$color-dark-title: rgb(255, 247, 185);
+$color-dark-dataset: #ffea72;
+$color-dark-keyword: #6fb7d0;
+$color-dark-theme: #ff8314;
+$color-dark-body: #060e1b;
+
+$color-light-title: #029CB1;
+$color-light-dataset: #9ECE55;
+$color-light-keyword: #821D5C;
+$color-light-theme: #018882;
+$color-light-body: #9ECE55;
+
+// Body
+body {
+    background-color: $color-dark-body;
+}
+
+// Background
+canvas {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+// Content
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+// Title
 .title {
     display: flex;
     align-content: center;
     justify-content: center;
+    font-family: $font-family-title;
+    font-weight: $font-title;
+    font-size: $font-size-title;
+    color: $color-dark-title;
 }
-
 // Graph div
-
 .graph {
     height: 100%;
     width: 100%;
-    background-color: lightblue;
-
+    position: relative;
+    margin-top: 1em;
     svg {
         height: 100%;
         width: 100%;
     }
 }
 
-.node circle {
-  stroke: #fff;
-  stroke-width: 1.5px;
+.link line {
+    transition: opacity 0.5s ease-in-out;
+    stroke: $line;
+    stroke-width: 2px;
+    stroke-opacity: 0.1;
+}
+
+.secondary-link {
+    opacity: 0.07;
+}
+
+// Nodes
+.nodes circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
+    fill: #fff;
+}
+
+circle {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.dataset {
+    fill: $color-dark-dataset;
+}
+
+.keyword {
+    fill: $color-dark-keyword;
+}
+
+.theme {
+    fill: $color-dark-theme;
+}
+
+.secondary-node {
+    opacity: 0.2;
+}
+
+.node-text {
+    pointer-events: none;
+    font-size: $font-size;
+    font-family: $font-family;
+    fill: $text;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
